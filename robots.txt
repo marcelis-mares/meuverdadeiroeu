@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://meuverdadeiroeu.com.br/sitemap.xml
