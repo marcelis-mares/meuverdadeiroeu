@@ -2,6 +2,80 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/live", "destination": "/?utm_source=instagram&utm_medium=live&utm_campaign=mve&utm_content=live-05-11-26", "permanent": false }
+    {
+      "source": "/live",
+      "destination": "/?utm_source=instagram&utm_medium=live&utm_campaign=mve&utm_content=live",
+      "permanent": false
+    },
+    {
+      "source": "/stories",
+      "destination": "/?utm_source=instagram&utm_medium=stories&utm_campaign=mve&utm_content=stories",
+      "permanent": false
+    },
+    {
+      "source": "/ig",
+      "destination": "/?utm_source=instagram&utm_medium=bio&utm_campaign=mve&utm_content=bio",
+      "permanent": false
+    },
+    {
+      "source": "/direct",
+      "destination": "/?utm_source=instagram&utm_medium=direct&utm_campaign=mve&utm_content=direct",
+      "permanent": false
+    },
+    {
+      "source": "/tiktok",
+      "destination": "/?utm_source=tiktok&utm_medium=bio&utm_campaign=mve&utm_content=bio",
+      "permanent": false
+    },
+    {
+      "source": "/tt-live",
+      "destination": "/?utm_source=tiktok&utm_medium=live&utm_campaign=mve&utm_content=live",
+      "permanent": false
+    },
+    {
+      "source": "/tt-video",
+      "destination": "/?utm_source=tiktok&utm_medium=video&utm_campaign=mve&utm_content=video",
+      "permanent": false
+    },
+    {
+      "source": "/wpp",
+      "destination": "/?utm_source=whatsapp&utm_medium=comunidade&utm_campaign=mve&utm_content=casa-dourada-avisos",
+      "permanent": false
+    },
+    {
+      "source": "/wpp-saude",
+      "destination": "/?utm_source=whatsapp&utm_medium=grupo&utm_campaign=mve&utm_content=saude-longevidade",
+      "permanent": false
+    },
+    {
+      "source": "/wpp-atomy",
+      "destination": "/?utm_source=whatsapp&utm_medium=grupo&utm_campaign=mve&utm_content=atomy",
+      "permanent": false
+    },
+    {
+      "source": "/wpp-lancamento",
+      "destination": "/?utm_source=whatsapp&utm_medium=grupo&utm_campaign=mve&utm_content=lancamento-mentoria",
+      "permanent": false
+    },
+    {
+      "source": "/wpp-lu",
+      "destination": "/?utm_source=whatsapp&utm_medium=individual&utm_campaign=mve&utm_content=lu",
+      "permanent": false
+    },
+    {
+      "source": "/palestra",
+      "destination": "/?utm_source=presencial&utm_medium=palestra&utm_campaign=mve&utm_content=palestra",
+      "permanent": false
+    },
+    {
+      "source": "/evento",
+      "destination": "/?utm_source=presencial&utm_medium=evento&utm_campaign=mve&utm_content=evento",
+      "permanent": false
+    },
+    {
+      "source": "/atomy",
+      "destination": "/?utm_source=presencial&utm_medium=reuniao&utm_campaign=mve&utm_content=reuniao-atomy",
+      "permanent": false
+    }
   ]
 }
