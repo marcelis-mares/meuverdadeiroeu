@@ -416,8 +416,8 @@ footer b{color:var(--perola)}
     </form>
     <div class="ok-espera" id="okEspera">
       <h3>Você está na lista</h3>
-      <p>Estamos abrindo o WhatsApp da Lu para você. Se não abrir sozinho, toque abaixo.</p>
-      <a class="btn" id="okWa" href="https://wa.me/5527999460408">Falar com a Lu no WhatsApp</a>
+      <p>O WhatsApp da Lu abriu em outra aba. Se não abriu, toque abaixo.</p>
+      <a class="btn" id="okWa" href="https://wa.me/5527999460408" target="_blank" rel="noopener">Falar com a Lu no WhatsApp</a>
       <p style="margin-top:22px;font-size:15px">E entre no grupo da lista de espera: é lá que a abertura das inscrições chega primeiro.</p>
       <a class="btn" id="okGrupo" href="https://chat.whatsapp.com/HvPr7elbUP97tGLYL5H6du" target="_blank" rel="noopener" style="background:var(--branco);color:var(--verde);border:1px solid var(--ouro);margin-top:10px">Entrar no grupo da lista de espera</a>
     </div>
@@ -474,7 +474,8 @@ function vaiLu(txt){
   document.getElementById('okWa').href=wa;
   document.getElementById('okEspera').style.display='block';
   document.getElementById('okEspera').scrollIntoView({behavior:'smooth',block:'center'});
-  setTimeout(function(){ location.href=wa; },900);
+  var aba=null; try { aba=window.open(wa,'_blank'); if(aba) aba.opener=null; } catch(x){}
+  ev('mve_wa_lu',{abriu_nova_aba: aba?'sim':'nao'});
 }
 form.addEventListener('submit',function(e){
   e.preventDefault();
