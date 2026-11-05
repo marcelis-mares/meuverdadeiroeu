@@ -2,7 +2,7 @@
    GA conta visitas sem cookie até a pessoa aceitar; Clarity só carrega depois do aceite. */
 (function(){
   var GA_ID = 'G-BKZRRRTMXD';
-  var CLARITY_ID = '';            /* preencher com o ID do projeto no Clarity */
+  var CLARITY_ID = 'z90jkeu2qf';            /* preencher com o ID do projeto no Clarity */
   var CHAVE = 'mve_cookies';      /* 'sim' ou 'nao' */
 
   window.dataLayer = window.dataLayer || [];
