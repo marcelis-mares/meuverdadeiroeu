@@ -418,6 +418,8 @@ footer b{color:var(--perola)}
       <h3>Você está na lista</h3>
       <p>Estamos abrindo o WhatsApp da Lu para você. Se não abrir sozinho, toque abaixo.</p>
       <a class="btn" id="okWa" href="https://wa.me/5527999460408">Falar com a Lu no WhatsApp</a>
+      <p style="margin-top:22px;font-size:15px">E entre no grupo da lista de espera: é lá que a abertura das inscrições chega primeiro.</p>
+      <a class="btn" id="okGrupo" href="https://chat.whatsapp.com/HvPr7elbUP97tGLYL5H6du" target="_blank" rel="noopener" style="background:var(--branco);color:var(--verde);border:1px solid var(--ouro);margin-top:10px">Entrar no grupo da lista de espera</a>
     </div>
   </div>
   <div class="garantia"><div class="selo"><b>7</b><span>dias</span></div><div style="text-align:left">Você tem 7 dias depois da compra para pedir o reembolso integral, sem precisar explicar o motivo.</div></div>
@@ -509,6 +511,7 @@ perg.addEventListener('submit',function(e){
     +'Turma Fundadora: '+r.decisao;
   vaiLu(t);
 });
+document.getElementById('okGrupo').addEventListener('click',function(){ ev('mve_grupo_whatsapp'); });
 document.getElementById('pPular').addEventListener('click',function(){
   ev('mve_perguntas_pulou');
   vaiLu('Olá, Lu! Sou '+LEAD.nome+' e acabei de entrar na lista de espera da mentoria Meu Verdadeiro Eu, da Rosi Pella. Quero saber mais sobre a Turma Fundadora.');
