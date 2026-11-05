@@ -1,1 +1,7 @@
-{ "cleanUrls": true, "trailingSlash": false }
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/live", "destination": "/?utm_source=instagram&utm_medium=live&utm_campaign=mentoria-meu-verdadeiro-eu&utm_content=live-05-11-2026", "permanent": false }
+  ]
+}
