@@ -162,6 +162,26 @@ footer b{color:var(--perola)}
 .form-espera .nota{font-size:13.5px;color:var(--neutro);text-align:center;margin-top:12px}
 .form-espera .erro{display:none;color:#9A4B3A;font-size:14px;margin-top:10px;text-align:center}
 .ok-espera{display:none;text-align:center;padding:10px 0}
+.perg{display:none;text-align:left;margin-top:22px}
+.perg .tit{text-align:center;font-family:"Cormorant Garamond",serif;font-size:26px;font-weight:600;color:var(--verde)}
+.perg .sub{text-align:center;font-size:15px;margin:6px 0 4px}
+.perg fieldset{border:0;padding:0;margin:20px 0 0}
+.perg legend{font-size:15.5px;color:var(--tinta);font-weight:500;margin-bottom:10px;padding:0}
+.perg .ops{display:flex;flex-wrap:wrap;gap:8px}
+.perg .ops label{position:relative;cursor:pointer}
+.perg .ops input{position:absolute;opacity:0;pointer-events:none}
+.perg .ops span{display:inline-block;font-size:14.5px;line-height:1.35;color:var(--tinta);background:var(--perola);border:1px solid var(--linha);border-radius:99px;padding:9px 15px;transition:all .15s}
+.perg .ops.col{flex-direction:column}
+.perg .ops.col span{border-radius:12px;display:block}
+.perg .ops input:checked+span{background:var(--verde);border-color:var(--verde);color:var(--perola)}
+.perg .ops input:focus-visible+span{box-shadow:0 0 0 3px rgba(201,162,39,.3)}
+.perg input[type=text],.perg textarea{width:100%;font:inherit;font-size:16px;color:var(--tinta);background:var(--perola);border:1px solid var(--linha);border-radius:10px;padding:12px 14px}
+.perg textarea{min-height:70px;resize:vertical;margin-top:10px}
+.perg input[type=text]:focus,.perg textarea:focus{outline:none;border-color:var(--ouro);box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.perg .opc{font-size:13px;color:var(--neutro);margin-top:8px}
+.perg .btn{width:100%;margin-top:24px;text-align:center}
+.perg .erro{display:none;color:#9A4B3A;font-size:14px;margin-top:10px;text-align:center}
+.perg .pular{display:block;text-align:center;font-size:13.5px;color:var(--neutro);margin-top:14px;text-decoration:underline;background:none;border:0;width:100%;cursor:pointer;font-family:inherit}
 .ok-espera h3{font-size:30px}
 .ok-espera .btn{margin-top:16px}
 .convidados{background:var(--branco);border:1px solid var(--linha);border-radius:16px;padding:30px;margin-top:30px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
@@ -352,9 +372,47 @@ footer b{color:var(--perola)}
       <input id="fTel" name="telefone" type="tel" inputmode="tel" maxlength="16" autocomplete="tel" placeholder="(00) 00000-0000" required>
       <label for="fEmail">E-mail</label>
       <input id="fEmail" name="email" type="email" autocomplete="email" required>
-      <button class="btn" type="submit" data-ev="oferta">Quero entrar na lista</button>
+      <button class="btn" type="submit" data-ev="oferta">Continuar</button>
       <div class="erro" id="fErro">Preencha nome, WhatsApp e e-mail para continuar.</div>
-      <div class="nota">Aqui você não paga nada. Em seguida, você fala com a Lu, assessora da Rosi, no WhatsApp.</div>
+      <div class="nota">Aqui você não paga nada. Depois de 6 perguntas rápidas, você fala com a Lu, assessora da Rosi, no WhatsApp.</div>
+    </form>
+    <form class="perg" id="formPerg" novalidate>
+      <div class="tit">Conte um pouco sobre você</div>
+      <p class="sub">Leva menos de 1 minuto. Assim a Lu já chega na conversa sabendo quem você é.</p>
+      <fieldset><legend>1. Qual a sua faixa de idade?</legend><div class="ops">
+        <label><input type="radio" name="idade" value="Até 34 anos"><span>Até 34</span></label>
+        <label><input type="radio" name="idade" value="35 a 44 anos"><span>35 a 44</span></label>
+        <label><input type="radio" name="idade" value="45 a 54 anos"><span>45 a 54</span></label>
+        <label><input type="radio" name="idade" value="55 anos ou mais"><span>55 ou mais</span></label>
+      </div></fieldset>
+      <fieldset><legend><label for="pTrab" style="all:unset">2. Com o que você trabalha hoje?</label></legend>
+        <input type="text" id="pTrab" name="trabalho" maxlength="120" placeholder="Ex.: tenho uma clínica, sou advogada, sou empresária">
+      </fieldset>
+      <fieldset><legend>3. O que mais pesa para você hoje?</legend><div class="ops col">
+        <label><input type="radio" name="pesa" value="Conquistei muito, mas me perdi de mim no caminho"><span>Conquistei muito, mas me perdi de mim no caminho</span></label>
+        <label><input type="radio" name="pesa" value="Vivo reagindo, no automático"><span>Vivo reagindo, no automático</span></label>
+        <label><input type="radio" name="pesa" value="Me cobro muito e nunca parece suficiente"><span>Me cobro muito e nunca parece suficiente</span></label>
+        <label><input type="radio" name="pesa" value="Quero clareza sobre quem sou antes dos próximos passos"><span>Quero clareza sobre quem sou antes dos próximos passos</span></label>
+      </div>
+        <textarea id="pPesa" name="pesa_livre" maxlength="280" placeholder="Se quiser, conte com as suas palavras"></textarea>
+        <div class="opc">Opcional</div>
+      </fieldset>
+      <fieldset><legend>4. Você já fez alguma mentoria antes?</legend><div class="ops">
+        <label><input type="radio" name="mentoria" value="Sim"><span>Sim</span></label>
+        <label><input type="radio" name="mentoria" value="Não"><span>Não</span></label>
+      </div></fieldset>
+      <fieldset><legend>5. Os encontros são às quartas, às 20h, a cada 15 dias. Você consegue participar?</legend><div class="ops col">
+        <label><input type="radio" name="quartas" value="Sim, consigo ao vivo"><span>Sim, consigo ao vivo</span></label>
+        <label><input type="radio" name="quartas" value="Algumas vezes, e assisto à gravação nas outras"><span>Algumas vezes, e assisto à gravação nas outras</span></label>
+        <label><input type="radio" name="quartas" value="Não consigo às quartas"><span>Não consigo às quartas</span></label>
+      </div></fieldset>
+      <fieldset><legend>6. Como você está em relação à Turma Fundadora?</legend><div class="ops col">
+        <label><input type="radio" name="decisao" value="Já estou decidida a entrar"><span>Já estou decidida a entrar</span></label>
+        <label><input type="radio" name="decisao" value="Tenho interesse, mas ainda tenho dúvidas"><span>Tenho interesse, mas ainda tenho dúvidas</span></label>
+      </div></fieldset>
+      <button class="btn" type="submit">Enviar e falar com a Lu</button>
+      <div class="erro" id="pErro">Responda as perguntas 1, 3, 4, 5 e 6 para continuar.</div>
+      <button class="pular" type="button" id="pPular">Prefiro falar direto com a Lu</button>
     </form>
     <div class="ok-espera" id="okEspera">
       <h3>Você está na lista</h3>
@@ -406,22 +464,54 @@ var fTel=document.getElementById('fTel');
 fTel.addEventListener('input',function(){ fTel.value=mascara(fTel.value); });
 var form=document.getElementById('formEspera'), iniciou=false;
 form.addEventListener('focusin',function(){ if(!iniciou){ iniciou=true; ev('mve_lista_inicio'); } });
+var LEAD={};
+function envia(dados){ try { fetch(PLANILHA,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(dados)}); } catch(x){} }
+function vaiLu(txt){
+  var wa='https://wa.me/'+WA_LU+'?text='+encodeURIComponent(txt);
+  document.getElementById('formPerg').style.display='none';
+  document.getElementById('okWa').href=wa;
+  document.getElementById('okEspera').style.display='block';
+  document.getElementById('okEspera').scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(function(){ location.href=wa; },900);
+}
 form.addEventListener('submit',function(e){
   e.preventDefault();
   var nome=document.getElementById('fNome').value.trim(), tel=dig(fTel.value), email=document.getElementById('fEmail').value.trim();
   var erro=document.getElementById('fErro');
   if(!nome || tel.length<10 || email.indexOf('@')<1){ erro.style.display='block'; return; }
   erro.style.display='none';
-  var u=utm(), origem='LP Meu Verdadeiro Eu, lista de espera';
-  var txt='Olá, Lu! Sou '+nome+' e acabei de entrar na lista de espera da mentoria Meu Verdadeiro Eu, da Rosi Pella. Quero saber mais sobre a Turma Fundadora.';
-  var wa='https://wa.me/'+WA_LU+'?text='+encodeURIComponent(txt);
-  try { fetch(PLANILHA,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({nome:nome,whatsapp:'https://wa.me/55'+tel,email:email,origem:origem,utm_source:u.utm_source,utm_medium:u.utm_medium,utm_campaign:u.utm_campaign,utm_content:u.utm_content,utm_term:u.utm_term})}); } catch(x){}
+  var u=utm();
+  LEAD={nome:nome,whatsapp:'https://wa.me/55'+tel,email:email,utm_source:u.utm_source,utm_medium:u.utm_medium,utm_campaign:u.utm_campaign,utm_content:u.utm_content,utm_term:u.utm_term};
+  envia(Object.assign({},LEAD,{origem:'LP Meu Verdadeiro Eu, lista de espera'}));
   ev('gerar_lead',{formulario:'Lista de espera Meu Verdadeiro Eu'});
   ev('mve_lista_espera',{origem:u.utm_source||'direto'});
   form.style.display='none';
-  document.getElementById('okWa').href=wa;
-  document.getElementById('okEspera').style.display='block';
-  setTimeout(function(){ location.href=wa; },900);
+  var fp=document.getElementById('formPerg'); fp.style.display='block';
+  fp.scrollIntoView({behavior:'smooth',block:'start'});
+});
+function marcado(n){ var el=document.querySelector('#formPerg input[name="'+n+'"]:checked'); return el?el.value:''; }
+var perg=document.getElementById('formPerg'), pInicio=false;
+perg.addEventListener('change',function(){ if(!pInicio){ pInicio=true; ev('mve_perguntas_inicio'); } });
+perg.addEventListener('submit',function(e){
+  e.preventDefault();
+  var r={idade:marcado('idade'),trabalho:document.getElementById('pTrab').value.trim(),pesa:marcado('pesa'),pesa_livre:document.getElementById('pPesa').value.trim(),mentoria:marcado('mentoria'),quartas:marcado('quartas'),decisao:marcado('decisao')};
+  var pe=document.getElementById('pErro');
+  if(!r.idade||!r.pesa||!r.mentoria||!r.quartas||!r.decisao){ pe.style.display='block'; return; }
+  pe.style.display='none';
+  envia(Object.assign({},LEAD,r,{origem:'LP Meu Verdadeiro Eu, perguntas respondidas'}));
+  ev('mve_perguntas',{decisao:r.decisao.indexOf('decidida')>-1?'decidida':'duvidas',idade:r.idade,mentoria:r.mentoria,quartas:r.quartas});
+  var t='Olá, Lu! Sou '+LEAD.nome+' e acabei de entrar na lista de espera da mentoria Meu Verdadeiro Eu, da Rosi Pella.\n\n'
+    +'Idade: '+r.idade+'\n'
+    +(r.trabalho?'Trabalho: '+r.trabalho+'\n':'')
+    +'O que mais pesa hoje: '+r.pesa+(r.pesa_livre?' ('+r.pesa_livre+')':'')+'\n'
+    +'Já fiz mentoria: '+r.mentoria+'\n'
+    +'Quartas às 20h: '+r.quartas+'\n'
+    +'Turma Fundadora: '+r.decisao;
+  vaiLu(t);
+});
+document.getElementById('pPular').addEventListener('click',function(){
+  ev('mve_perguntas_pulou');
+  vaiLu('Olá, Lu! Sou '+LEAD.nome+' e acabei de entrar na lista de espera da mentoria Meu Verdadeiro Eu, da Rosi Pella. Quero saber mais sobre a Turma Fundadora.');
 });
 </script>
 </body>
