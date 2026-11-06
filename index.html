@@ -418,7 +418,7 @@ footer b{color:var(--perola)}
     <div class="ok-espera" id="okCheckout">
       <h3>Sua vaga está a um passo</h3>
       <p>Estamos levando você para a inscrição. Se a página não abriu, toque abaixo.</p>
-      <a class="btn" id="okChk" href="/inscricao">Ir para a inscrição</a>
+      <a class="btn" id="okChk" href="/pagamento">Ir para a inscrição</a>
       <p style="margin-top:18px;font-size:14px">Logo após a compra você recebe o e-mail de acesso à escola. O conteúdo digital é liberado lá em janeiro de 2027.</p>
     </div>
     <div class="ok-espera" id="okEspera">
@@ -456,7 +456,7 @@ footer b{color:var(--perola)}
 
 <script>
 var WA_LU='5527999460408';
-var CHECKOUT='https://meuverdadeiroeu.com.br/inscricao';
+var CHECKOUT='https://meuverdadeiroeu.com.br/pagamento';
 var PLANILHA='https://script.google.com/macros/s/AKfycbxz4Ofj39mYEmcUVflWC0njRE8L-yBJ5vBnQP0frlv0nB-rB4Lm26FY4Y0XU7NVY4Z5/exec';
 function dig(v){ var d=String(v||'').replace(/\D/g,''); if(d.length>11 && d.indexOf('55')===0) d=d.slice(2); return d.slice(0,11); }
 function mascara(v){ var d=dig(v); if(d.length>6) return '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7); if(d.length>2) return '('+d.slice(0,2)+') '+d.slice(2); if(d.length) return '('+d; return ''; }
