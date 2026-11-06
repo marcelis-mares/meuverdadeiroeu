@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/inscricao",
+      "destination": "/pagamento",
+      "permanent": true
+    },
+    {
       "source": "/live",
       "destination": "/?utm_source=instagram&utm_medium=live&utm_campaign=mve&utm_content=live",
       "permanent": false
