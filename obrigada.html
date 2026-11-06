@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaga garantida · Meu Verdadeiro Eu</title>
+<meta name="robots" content="noindex,nofollow">
+<script src="/medicao.js"></script>
+<style>
+
+@font-face{font-family:"Cormorant Garamond";font-weight:500;font-style:normal;font-display:swap;src:url(/fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-weight:600;font-style:normal;font-display:swap;src:url(/fonts/cormorant-garamond-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:300;font-style:normal;font-display:swap;src:url(/fonts/jost-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/jost-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:500;font-style:normal;font-display:swap;src:url(/fonts/jost-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Pinyon Script";font-weight:400;font-style:normal;font-display:swap;src:url(/fonts/pinyon-script-latin-400-normal.woff2) format("woff2")}
+
+:root{--verde:#1E3D33;--verde2:#2B5246;--ouro:#C9A227;--ouro-txt:#8C6B14;--ouro-cl:#E8D9A6;--perola:#F7F3EA;--branco:#FFFDF8;--tinta:#1E3D33;--tinta2:#4E5A52;--neutro:#6E6A5E;--linha:#E4DCC8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--perola);color:var(--tinta2);font-family:"Jost",-apple-system,"Segoe UI",sans-serif;font-weight:300;font-size:17.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;color:var(--verde);line-height:1.1;margin:0}
+b,strong{font-weight:500;color:var(--tinta)}
+.script{font-family:"Pinyon Script",cursive;font-weight:400;color:var(--ouro-txt);font-size:1.12em;letter-spacing:0}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.wide{max-width:1040px;margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+.eb{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-txt);font-weight:500}
+h2{font-size:clamp(32px,5vw,46px);margin-top:12px}
+p{margin:14px 0}
+.btn{display:inline-block;background:var(--verde);color:var(--perola);text-decoration:none;padding:16px 30px;border-radius:99px;font-size:15px;letter-spacing:.06em;font-weight:400;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--verde2)}
+.btn.claro{background:var(--perola);color:var(--verde)}
+.apoio{font-size:14px;color:var(--neutro);margin-top:12px}
+.filete{width:56px;height:2px;background:var(--ouro);margin:22px 0}
+.topo{padding:22px 0 0;text-align:center}
+.topo img{height:64px;width:auto}
+.cab{text-align:center;padding:30px 22px 10px}
+.cab h1{font-size:clamp(36px,6.4vw,56px)}
+.cab p{max-width:42ch;margin:16px auto 0;font-size:18px}
+.passos{max-width:720px;margin:26px auto 0;padding:0 22px;display:grid;gap:14px}
+.passo{background:var(--branco);border:1px solid var(--linha);border-radius:18px;padding:24px 24px 22px;display:grid;grid-template-columns:52px 1fr;gap:4px 16px;align-items:start}
+.passo > *:not(.n){grid-column:2}
+.passo .n{grid-row:1 / span 6;width:44px;height:44px;border-radius:50%;background:var(--verde);color:var(--perola);display:flex;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:600}
+.passo h2{font-size:28px;margin:4px 0 0}
+.passo p{margin:6px 0 0;font-size:16px;line-height:1.55}
+.passo .btn{margin-top:14px;justify-self:start}
+.passo .btn.sec{background:var(--branco);color:var(--verde);border:1px solid var(--ouro)}
+.passo ul{margin:8px 0 0;padding-left:18px;font-size:16px;line-height:1.55}
+.passo li{margin:6px 0}
+.agenda{background:var(--verde);color:#C9D6CF;border-radius:18px;padding:26px 24px;max-width:676px;margin:14px auto 0}
+.agenda h2{color:var(--perola);font-size:28px}
+.agenda b{color:var(--perola)}
+.agenda .script{color:var(--ouro)}
+.agenda ul{margin:10px 0 0;padding-left:18px;font-size:16px;line-height:1.6}
+.agenda li{margin:6px 0}
+.fim{text-align:center;max-width:52ch;margin:30px auto 0;padding:0 22px;font-size:15px;color:var(--neutro)}
+footer{text-align:center;font-size:13px;color:var(--neutro);padding:34px 22px 40px;margin-top:40px;border-top:1px solid var(--linha)}
+@media(max-width:520px){.passo{grid-template-columns:1fr}.passo .n{grid-row:auto}.passo > *:not(.n){grid-column:1}}
+</style>
+</head>
+<body>
+<div class="topo"><img src="/mveu-logo.png" alt="Meu Verdadeiro Eu · Rosi Pella" width="260" height="130"></div>
+<div class="cab">
+  <div class="eb">Turma Fundadora</div>
+  <h1>Sua vaga está <span class="script">garantida</span></h1>
+  <p>Que alegria ter você no Meu Verdadeiro Eu. Faça agora os dois passos abaixo, leva menos de um minuto.</p>
+</div>
+
+<div class="passos">
+  <div class="passo">
+    <div class="n">1</div>
+    <h2>Entre no grupo das alunas</h2>
+    <p>É no grupo <b>Meu Verdadeiro Eu · Alunas</b> que chegam os avisos da turma: data do primeiro encontro, link da sala e lembretes.</p>
+    <a class="btn" id="btGrupo" href="/alunas?utm_source=obrigada&utm_medium=pagina&utm_campaign=mve">Entrar no grupo das alunas</a>
+  </div>
+  <div class="passo">
+    <div class="n">2</div>
+    <h2>Salve o contato da Lu</h2>
+    <p>A Lu é a assessora da Rosi e cuida do seu atendimento. Mande um oi para ela já salvar você na lista da turma.</p>
+    <a class="btn sec" id="btLu" href="https://wa.me/5527999460408?text=Ol%C3%A1%2C%20Lu!%20Acabei%20de%20garantir%20minha%20vaga%20na%20Turma%20Fundadora%20do%20Meu%20Verdadeiro%20Eu." target="_blank" rel="noopener">Falar com a Lu no WhatsApp</a>
+  </div>
+  <div class="passo">
+    <div class="n">3</div>
+    <h2>Confira o seu e-mail</h2>
+    <p>Nas próximas horas chegam dois e-mails:</p>
+    <ul>
+      <li><b>Comprovante da Eduzz</b>, com os dados do pagamento.</li>
+      <li><b>Acesso à escola Meu Verdadeiro Eu</b>, com o seu login. É lá que ficam as aulas gravadas.</li>
+    </ul>
+    <p>Se não encontrar, procure nas abas Promoções e Spam. Se ainda assim não chegar, fale com a Lu.</p>
+  </div>
+</div>
+
+<div style="padding:0 22px"><div class="agenda">
+  <div class="eb" style="color:var(--ouro-cl)">Quando começa</div>
+  <h2>A jornada começa em <span class="script">janeiro</span></h2>
+  <ul>
+    <li><b>Início em janeiro de 2027.</b> A data do primeiro encontro e o link da sala chegam no grupo das alunas e por e-mail.</li>
+    <li><b>Encontros ao vivo às quartas, às 20h</b> (horário de Brasília), a cada 15 dias, com cerca de 1h30.</li>
+    <li><b>Conteúdo digital liberado na escola em janeiro</b>, junto com o primeiro encontro.</li>
+    <li><b>Encontro presencial na Casa Dourada</b>, na Ilha do Boi, só para fundadoras, para a entrega do Manifesto. A data é avisada no grupo.</li>
+  </ul>
+</div></div>
+
+<p class="fim">Você tem 7 dias depois da compra para pedir o reembolso integral, sem precisar explicar o motivo.</p>
+<footer><b>Meu Verdadeiro Eu</b> · mentoria com Rosi Pella · @rosipella</footer>
+
+<script>
+(function(){
+  var PLANILHA='https://script.google.com/macros/s/AKfycbxz4Ofj39mYEmcUVflWC0njRE8L-yBJ5vBnQP0frlv0nB-rB4Lm26FY4Y0XU7NVY4Z5/exec';
+  function ev(n,x){ try{ if(window.maresEvento) window.maresEvento(n,x||{}); }catch(e){} }
+  var q=new URLSearchParams(location.search);
+  var chave='mve_compra_'+(q.get('trans_cod')||q.get('transacao')||q.get('id')||'');
+  var ja=false; try{ ja=localStorage.getItem(chave)==='1'; }catch(e){}
+  if(!ja){
+    try{ localStorage.setItem(chave,'1'); }catch(e){}
+    try{ if(window.gtag) gtag('event','purchase',{transaction_id:chave.replace('mve_compra_','')||undefined,value:997,currency:'BRL',items:[{item_id:'3145835',item_name:'Meu Verdadeiro Eu · Turma Fundadora',price:997,quantity:1}]}); }catch(e){}
+    ev('mve_compra',{valor:997});
+    var dados={origem:'Compra · página de obrigada',pagina:'obrigada',parametros:q.toString(),quando:new Date().toISOString()};
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ dados[k]=q.get(k)||''; });
+    try{ fetch(PLANILHA,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(dados)}); }catch(e){}
+  }
+  document.getElementById('btGrupo').addEventListener('click',function(){ ev('mve_obrigada_grupo'); });
+  document.getElementById('btLu').addEventListener('click',function(){ ev('mve_obrigada_lu'); });
+})();
+</script>
+</body>
+</html>
