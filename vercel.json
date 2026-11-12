@@ -63,6 +63,21 @@
       "permanent": false
     },
     {
+      "source": "/wpp-equipe",
+      "destination": "/?utm_source=whatsapp&utm_medium=individual&utm_campaign=mve&utm_content=equipe",
+      "permanent": false
+    },
+    {
+      "source": "/wpp-perfil",
+      "destination": "/?utm_source=whatsapp&utm_medium=perfil&utm_campaign=mve&utm_content=perfil-business",
+      "permanent": false
+    },
+    {
+      "source": "/pagar-equipe",
+      "destination": "/pagamento?utm_source=whatsapp&utm_medium=individual&utm_campaign=mve&utm_content=equipe-pagamento",
+      "permanent": false
+    },
+    {
       "source": "/wpp-lu",
       "destination": "/?utm_source=whatsapp&utm_medium=individual&utm_campaign=mve&utm_content=lu",
       "permanent": false
