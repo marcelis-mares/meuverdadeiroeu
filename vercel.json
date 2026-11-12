@@ -84,17 +84,17 @@
     },
     {
       "source": "/pagar",
-      "destination": "/inscricao?utm_source=presencial&utm_medium=pagamento&utm_campaign=mve&utm_content=qr-pagamento",
+      "destination": "/pagamento?utm_source=presencial&utm_medium=pagamento&utm_campaign=mve&utm_content=qr-pagamento",
       "permanent": false
     },
     {
       "source": "/pagar-lu",
-      "destination": "/inscricao?utm_source=whatsapp&utm_medium=individual&utm_campaign=mve&utm_content=lu-pagamento",
+      "destination": "/pagamento?utm_source=whatsapp&utm_medium=individual&utm_campaign=mve&utm_content=lu-pagamento",
       "permanent": false
     },
     {
       "source": "/pagar-grupo",
-      "destination": "/inscricao?utm_source=whatsapp&utm_medium=grupo&utm_campaign=mve&utm_content=lista-de-espera-pagamento",
+      "destination": "/pagamento?utm_source=whatsapp&utm_medium=grupo&utm_campaign=mve&utm_content=lista-de-espera-pagamento",
       "permanent": false
     }
   ]
